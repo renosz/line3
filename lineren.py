@@ -80,7 +80,7 @@ while True:
                         P.preventedJoinByTicket = False
                         assist.updateGroup(P)
                         invsend = 0
-                        Ticket = assist.reissueGroupByTicket(op.param1)
+                        Ticket = assist.reissueGroupTicket(op.param1)
                         client.acceptGroupInvitationByTicket(op.param1, Ticket)
                         A = assist.getGroup(op.param1)
                         A.preventedJoinByTicket = False
@@ -92,7 +92,7 @@ while True:
                         P.preventedJoinByTicket = False
                         client.updateGroup(P)
                         invsend = 0
-                        Ticket = client.reissueGroupByTicket(op.param1)
+                        Ticket = client.reissueGroupTicket(op.param1)
                         assist.acceptGroupInvitationByTicket(op.param1, Ticket)
                         A = client.getGroup(op.param1)
                         A.preventedJoinByTicket = False
