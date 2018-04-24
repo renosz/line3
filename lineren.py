@@ -1,15 +1,17 @@
 # -*- coding: utf-8 -*-
 from linepy import *
-import json, time, random, tempfile, os, sys
+import json, time, random, tempfile, os, sys, codecs
 from gtts import gTTS
 from googletrans import Translator
 
+#==================TOKEN SET AUTO===============
+dataToken = codecs.open("token.json","r","utf-8")
+token = json.load(dataToken)
 #===================SELF========================
 try:
     client = LineClient(authToken='E*')
 except:
     client = LineClient()
-client.log("Auth Token : " + str(client.authToken))
 channel = LineChannel(client)
 poll = LinePoll(client)
 #===================ASSIST========================
@@ -17,7 +19,6 @@ try:
     assist = LineClient(authToken='E*')
 except:
     assist = LineClient()
-assist.log("Auth Token : " + str(assist.authToken))
 assistchannel = LineChannel(assist)
 assistpoll = LinePoll(assist)
 #==================BOT LOGIN SUCCESS===============
