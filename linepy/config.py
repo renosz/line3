@@ -27,11 +27,11 @@ class Config(object):
         'LINE_BUSINESS': '1459630796'
     }
 
-    APP_TYPE    = ApplicationType._VALUES_TO_NAMES[96]
-    APP_VER     = '7.18.1'
+    APP_TYPE    = 'CHROMEOS'
+    APP_VER     = '1.4.21'
     CARRIER     = '51089, 1-0'
-    SYSTEM_NAME = 'FDLRCN'
-    SYSTEM_VER  = '11.2.5'
+    SYSTEM_NAME = 'Chrome_OS'
+    SYSTEM_VER  = '1'
     IP_ADDR     = '8.8.8.8'
     EMAIL_REGEX = re.compile(r"[^@]+@[^@]+\.[^@]+")
 
