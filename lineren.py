@@ -109,7 +109,7 @@ while True:
                         if msg.toType in [0,2]:
                             contact = client.getContact(sender)
                             if text.lower() == '?':
-                                client.sendText(receiver, 
+                                client.sendText(receiver, vol)
                             elif text.lower() == '1':
                                 client.sendMessage(receiver, None, contentMetadata={'mid': sender}, contentType=13)
                             elif text.lower() == '2':
