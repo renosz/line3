@@ -9,16 +9,22 @@ dataToken = codecs.open("token.json","r","utf-8")
 token = json.load(dataToken)
 #===================SELF========================
 try:
-    client = LineClient(authToken='E*')
+    client = LineClient(authToken=str(token["renbot1"]))
 except:
     client = LineClient()
+    token["renbot1"] = str(token["renbot1"])
+    f=codecs.open('token.json','w','utf-8')
+    json.dump(token, f, sort_keys=True, indent=4,ensure_ascii=False)
 channel = LineChannel(client)
 poll = LinePoll(client)
 #===================ASSIST========================
 try:
-    assist = LineClient(authToken='E*')
+    assist = LineClient(authToken=str(token["renbot2"]))
 except:
     assist = LineClient()
+    token["renbot2"] = str(token["renbot2"])
+    f=codecs.open('token.json','w','utf-8')
+    json.dump(token, f, sort_keys=True, indent=4,ensure_ascii=False)
 assistchannel = LineChannel(assist)
 assistpoll = LinePoll(assist)
 #==================BOT LOGIN SUCCESS===============
