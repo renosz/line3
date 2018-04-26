@@ -4,27 +4,18 @@ import json, time, random, tempfile, os, sys, codecs
 from gtts import gTTS
 from googletrans import Translator
 
-#==================TOKEN SET AUTO===============
-readOpen = codecs.open("line3/token.json","r","utf-8")
-token = json.load(readOpen)
 #===================SELF========================
 try:
-    client = LineClient(authToken=str(token["renbot1"]))
+    client = LineClient(authToken='auth_')
 except:
     client = LineClient()
-    token["renbot1"] = str(token["renbot1"])
-    f=codecs.open('token.json','w','utf-8')
-    json.dump(token, f, sort_keys=True, indent=4,ensure_ascii=False)
 channel = LineChannel(client)
 poll = LinePoll(client)
 #===================ASSIST========================
 try:
-    assist = LineClient(authToken=str(token["renbot2"]))
+    assist = LineClient(authToken='auth_')
 except:
     assist = LineClient()
-    token["renbot2"] = str(token["renbot2"])
-    f=codecs.open('token.json','w','utf-8')
-    json.dump(token, f, sort_keys=True, indent=4,ensure_ascii=False)
 assistchannel = LineChannel(assist)
 assistpoll = LinePoll(assist)
 #==================BOT LOGIN SUCCESS===============
