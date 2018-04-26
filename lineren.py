@@ -5,8 +5,8 @@ from gtts import gTTS
 from googletrans import Translator
 
 #==================TOKEN SET AUTO===============
-dataToken = codecs.open("token.json","r","utf-8")
-token = json.load(dataToken)
+readOpen = codecs.open("token.json","r","utf-8")
+token = json.load(readOpen)
 #===================SELF========================
 try:
     client = LineClient(authToken=str(token["renbot1"]))
