@@ -5,7 +5,7 @@ from gtts import gTTS
 from googletrans import Translator
 
 #==================TOKEN SET AUTO===============
-readOpen = codecs.open("token.json","r","utf-8")
+readOpen = codecs.open("line3/token.json","r","utf-8")
 token = json.load(readOpen)
 #===================SELF========================
 try:
