@@ -68,7 +68,10 @@ while True:
                     if op.param2 in renBot:
                         pass
                     else:
-                        random.choice(KCML).kickoutFromGroup(op.param1, [op.param2])
+                        try:
+                            random.choice(KCML).kickoutFromGroup(op.param1, [op.param2])
+                        except:
+                            client.kickoutFromGroup(op.param1, [op.param2])
                 else:
                     pass
             if op.type == 19:
