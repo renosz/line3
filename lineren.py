@@ -33,6 +33,7 @@ vol = """Simple Command:
 [+] 2 <- Look speedbot
 [+] 3 <- Tagall
 [+] . <- Joined assist
+[+] , <- Assist out
 [+] 9 <- Check reader
 [+] 0 <- Stop check reader
 [+] ; <- Restart bot
@@ -180,6 +181,8 @@ while True:
                                     client.updateGroup(X)
                                 except Exception as axsd:
                                     print(axsd)
+                            elif text.lower() == ',':
+                                assist.leaveGroup(receiver)
                             elif text.lower() == '9':
                                 try:
                                     del cctv['point'][receiver]
@@ -234,8 +237,7 @@ while True:
                                 pass
                             else:
                                 cctv['sidermem'][op.param1] += "\n~ " + Name
-                                pref=['eh ada','hai kak','aloo..','nah','lg ngapain','halo','sini kak']
-                                client.sendText(op.param1, str(random.choice(pref))+' '+Name)
+                                client.sendText(op.param1, 'Terbaca oleh: '+Name)
                         else:
                             pass
                     else:
