@@ -28,11 +28,11 @@ class Config(object):
     }
 
     APP_TYPE    = 'DESKTOPMAC'
-    APP_VER     = '5.9.0'
-    CARRIER     = '51089, 1-0'
+    APP_VER     = '5.20.1'
+    CARRIER     = '51011'
     SYSTEM_NAME = 'Mac_OS'
     SYSTEM_VER  = '15.23.6'
-    IP_ADDR     = '8.8.8.8'
+    IP_ADDR     = '127.0.0.1'
     EMAIL_REGEX = re.compile(r"[^@]+@[^@]+\.[^@]+")
 
     def __init__(self):
